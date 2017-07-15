@@ -1,0 +1,33 @@
+{
+  "name": "core_test",
+  "group" : "core-examples",
+  "enable_pipeline_locking": true,
+  "environment_variables": [],
+  "materials": [
+    {
+      "url": "https://github.com/vizog/triangle.git",
+      "type": "git",
+      "name" : "testgit",
+      "destination" : "core_test"
+    }
+  ],
+  "stages": [
+    {
+      "name": "test",
+      "jobs": [
+        {
+          "name": "mvn_test",
+          "tasks": [
+	  {
+              "type": "exec",
+              "command": "mvn",
+              "arguments": [
+                "test"
+              ],
+              "working_directory": "core_test"
+            ]
+          }
+      ]
+    }
+  ]
+}

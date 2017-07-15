@@ -1,0 +1,4 @@
+{
+    "name" : "dev",
+    "pipelines" : [ "core_test" ]
+}
